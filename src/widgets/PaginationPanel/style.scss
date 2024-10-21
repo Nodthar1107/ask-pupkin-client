@@ -1,0 +1,10 @@
+.pagination-panel {
+    display: flex;
+    gap: 10px;
+
+    &__page-button {
+        &_active {
+            background-color: rgb(172, 172, 172);
+        }
+    }
+}

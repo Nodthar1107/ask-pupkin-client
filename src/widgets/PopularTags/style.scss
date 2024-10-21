@@ -1,0 +1,33 @@
+.popular-tags {
+    padding: 5px 10px;
+    padding-left: 0px;
+
+    &__header {
+        padding: 0px;
+        margin-bottom: 20px;
+    }
+
+    &__tags-list {
+        min-width: 0;
+        display: flex;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        font-size: 18px;
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+}
+
+.popular-tag {
+    display: inline-block;
+    padding: 2px 5px;
+
+    &:hover {
+        background-color: rgb(231, 231, 231);
+        border-radius: 6px;
+    }
+}

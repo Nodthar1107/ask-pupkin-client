@@ -1,0 +1,35 @@
+.hr-line {
+    height: 1px;
+    background-color: black;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+.app-main {
+    padding: 40px 20px;
+
+    &__wrapper {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__content {
+        flex: 1 1 auto;
+        overflow: hidden;
+    }
+
+    &__aside {
+        min-width: 300px;
+    }
+}
+
+.app-footer {
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+
+    color: white;
+    background-color: black;
+}

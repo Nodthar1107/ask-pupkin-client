@@ -1,0 +1,36 @@
+.nodthar-ui-kit-button {
+    box-sizing: border-box;
+    padding: 5px 10px;
+
+    font-weight: bold;
+    text-transform: uppercase;
+
+    border: 3px solid black;
+    box-shadow: 5px 5px black;
+
+    &_primary {
+        color: white;
+        background-color: rgb(64, 186, 64);
+
+        &:hover {
+            background-color: rgb(71, 205, 71);
+        }
+
+        &:active {
+            background-color: rgb(56, 164, 56);
+        }
+    }
+
+    &_secondary {
+        color: black;
+        background-color: white;
+
+        &:hover {
+            background-color: rgb(236, 236, 236);
+        }
+
+        &:active {
+            background-color: rgb(185, 185, 185)
+        }
+    }
+}

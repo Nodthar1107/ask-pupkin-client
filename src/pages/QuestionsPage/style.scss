@@ -1,0 +1,20 @@
+.question-page {
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        gap: 20px;
+    }
+
+    &-title {
+        display: inline;
+    }
+
+    &__content {
+        padding-top: 20px;
+    }
+
+    &__aside {
+        min-width: 300px;
+    }
+}
