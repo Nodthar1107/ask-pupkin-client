@@ -1,13 +1,19 @@
 import { clsx } from 'clsx';
 import { ChangeEvent, FC, HTMLProps, ReactElement, useState } from 'react';
-import { localizations } from '@shared/i18n';
-import { InputControl } from '@shared/InputControl/InputControl';
+import { translations } from '@shared/i18n';
+import { DecoratedInputControl } from '@shared/DecoratedInputControl/DecoratedInputControl';
 import { LoupIcon } from '@shared/icons/LoupIcon';
 
 import '@widgets/Search/style.scss';
 import { Button } from '@shared/Button/Button';
 
-export const SearchBar: FC<HTMLProps<HTMLDivElement>> = ({ ...props }): ReactElement => {
+interface ISearchBarProps {
+    onSearchSubmit: VoidFunction;
+}
+
+export const SearchBar: FC<ISearchBarProps & HTMLProps<HTMLDivElement>> = ({
+    onSearchSubmit, ...props
+}): ReactElement => {
     const { className, ...others } = props;
     const [searchText, setSearchText] = useState<string>('');
     
@@ -15,13 +21,9 @@ export const SearchBar: FC<HTMLProps<HTMLDivElement>> = ({ ...props }): ReactEle
         setSearchText(event.target.value);
     }
 
-    const submitHandler = () => {
-        // Nothing
-    }
-
     return (
         <div className={clsx('search-bar', className)} {...others}>
-            <InputControl
+            <DecoratedInputControl
                 className='search-bar__input'
                 beforeIcon={<LoupIcon />}
                 value={searchText}
@@ -30,8 +32,8 @@ export const SearchBar: FC<HTMLProps<HTMLDivElement>> = ({ ...props }): ReactEle
             <Button
                 className='search-bar__submit-button'
                 color='primary'
-                onClick={submitHandler}>
-                {localizations.commons_askButton_text}
+                onClick={onSearchSubmit}>
+                {translations.commons_askButton_text}
             </Button>
         </div>
     );

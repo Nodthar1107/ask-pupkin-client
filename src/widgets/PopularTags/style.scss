@@ -16,15 +16,12 @@
 
         font-size: 18px;
     }
-
-    &__link {
-        text-decoration: none;
-    }
 }
 
 .popular-tag {
     display: inline-block;
     padding: 2px 5px;
+    text-decoration: none;
 
     &:hover {
         background-color: rgb(231, 231, 231);

@@ -1,4 +1,4 @@
-import { localizations } from "@shared/i18n";
+import { translations } from "@shared/i18n";
 import { clsx } from "clsx";
 import { ButtonHTMLAttributes, FC, ReactElement } from "react";
 

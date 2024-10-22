@@ -1,34 +1,41 @@
 import { clsx } from "clsx";
-import { ReactElement, HTMLProps, FC, useRef } from "react";
+import { ChangeEvent, FC, HTMLProps, ReactElement, useCallback, useState } from "react";
 
-import "@shared/InputControl/style.scss";
+import '@shared/InputControl/style.scss';
 
-interface IInputProps {
-    beforeIcon?: ReactElement;
+interface IInputControlProps {
+    value?: string;
+    mutiline?: boolean;
+    rows?: number;
+    cols?: number;
+    onChange?: (event: ChangeEvent) => void;
 }
 
-export const InputControl: FC<IInputProps & HTMLProps<HTMLInputElement>> = ({ beforeIcon, ...props }): ReactElement => {
-    const { value, placeholder, className, onChange, ...others } = props;
-    const inputRef = useRef<HTMLInputElement>(null);
+export const InputControl: FC<IInputControlProps & HTMLProps<HTMLElement>> = ({
+    value, mutiline, rows, cols, className, onChange, ...props
+}): ReactElement => {
+    const [inputValue, setInputValue] = useState(value || '');
 
-    const onClick = () => {
-        if (inputRef.current) {
-            inputRef.current.focus();
-        }
-    }
+    const TagName = mutiline ? 'textarea' : 'input';
+    const onChangeHandler = onChange || useCallback((event: ChangeEvent) => {
+        const target = mutiline
+            ? event.target as HTMLTextAreaElement
+            : event.target as HTMLInputElement;
+
+        setInputValue(target.value);
+    }, [onChange, mutiline]);
 
     return (
-        <span
-            className={clsx('input-component', className)}
-            onClick={onClick}
-            {...others}>
-            {beforeIcon && beforeIcon}
-            <input
-                className={'input-component__input'}
-                value={value}
-                placeholder={placeholder}
-                onChange={onChange}
-            />
-        </span>
+        <TagName
+            className={clsx(
+                'nodthar-ui-kit-input-control',
+                mutiline && 'nodthar-ui-kit-input-control_multiline',
+                className
+            )}
+            value={inputValue}
+            rows={rows}
+            cols={cols}
+            onChange={onChangeHandler}
+        />
     );
 }

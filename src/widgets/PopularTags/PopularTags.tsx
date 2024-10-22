@@ -1,7 +1,7 @@
 import { clsx } from "clsx";
 import { FC, HTMLProps, ReactElement } from "react";
 import { withRate } from "@shared/hocs/withRate/withRate";
-import { localizations } from "@shared/i18n";
+import { translations } from "@shared/i18n";
 
 import '@widgets/PopularTags/style.scss';
 import { Link } from "react-router-dom";
@@ -44,7 +44,7 @@ export const PopularTags: FC<HTMLProps<HTMLElement>> = ({ ...props }): ReactElem
     return (
         <div className='popular-tags'>
             <h3 className='popular-tags__header'>
-                {localizations.questionsPage_popularTags}
+                {translations.questionsPage_popularTags}
             </h3>
             <div className='popular-tags__tags-list'>
                 {tags.map((tag) => {
@@ -52,9 +52,9 @@ export const PopularTags: FC<HTMLProps<HTMLElement>> = ({ ...props }): ReactElem
                         <Link className='popular-tags__link' to='#'>
                             <Tag
                                 className='popular-tags__tag'
-                                rate={tag.popularityRate}>
-                                {tag.tagName}
-                            </Tag>
+                                rate={tag.popularityRate}
+                                label={tag.tagName}
+                            />
                         </Link>
                     );
                 })}
@@ -64,12 +64,12 @@ export const PopularTags: FC<HTMLProps<HTMLElement>> = ({ ...props }): ReactElem
 }
 
 const PopularTag: FC<HTMLProps<HTMLElement>> = ({ ...props }): ReactElement => {
-    const { className, children } = props;
+    const { className, label } = props;
     
     return (
-        <span className={clsx('popular-tag', className)}>
-            {children}
-        </span>
+        <Link className={clsx('popular-tag', className)} to={`/questions?tag=${label}`}>
+            {label}
+        </Link>
     )
 }
 

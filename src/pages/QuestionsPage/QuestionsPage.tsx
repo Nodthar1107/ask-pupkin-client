@@ -1,4 +1,4 @@
-import { localizations } from '@shared/i18n';
+import { translations } from '@shared/i18n';
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -15,10 +15,10 @@ export const QuestionsPage: FC = () => {
         <div className='quiestion-page'>
             <div className='question-page__header'>
                 <h2 className='question-page__title'>
-                    {localizations.questionsPage_header}
+                    {translations.questionsPage_header}
                 </h2>
                 <Link to='#'>
-                    {localizations.questionsPage_hotQuestionsLink}
+                    {translations.questionsPage_hotQuestionsLink}
                 </Link>
             </div>
             <div className='question-page__content'>

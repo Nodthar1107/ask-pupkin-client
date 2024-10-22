@@ -4,7 +4,7 @@ import { FC, ReactElement } from "react";
 import { Link } from "react-router-dom";
 
 import '@widgets/QuestionCard/style.scss';
-import { localizations } from "@shared/i18n";
+import { translations } from "@shared/i18n";
 
 interface IQuestionCardProps {
     cardId: number;
@@ -34,7 +34,7 @@ export const QuestionCard: FC<IQuestionCardProps> = ({
                 </div>
                 <div className='question-card__additional-info'>
                     <Link className='question-card__answers' to='#'>
-                        {localizations.questionsPage_answers}
+                        {translations.questionsPage_answers}
                         {answersCount > 99 ? '(99+)' : `(${answersCount})`}
                     </Link>
                     {tags && tags.length > 0 && (

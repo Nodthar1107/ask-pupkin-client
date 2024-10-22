@@ -8,6 +8,7 @@ h2 {
 }
 
 .app-main {
+    flex: 1 1 auto;
     padding: 40px 20px;
 
     &__wrapper {
@@ -21,7 +22,8 @@ h2 {
     }
 
     &__aside {
-        min-width: 300px;
+        min-width: 200px;
+        max-width: 300px;
     }
 }
 

@@ -1,7 +1,7 @@
 import { clsx } from "clsx";
 import { FC, HTMLProps, ReactElement } from "react";
 import { Link } from "react-router-dom";
-import { localizations } from "@shared/i18n";
+import { translations } from "@shared/i18n";
 
 import '@widgets/BestMembers/style.scss';
 
@@ -42,7 +42,7 @@ export const BestMembers: FC<HTMLProps<HTMLElement>> = ({
     return (
         <div className={clsx('best-members', className)}>
             <h3 className='best-members__header'>
-                {localizations.questionPage_bestMembers}
+                {translations.questionPage_bestMembers}
             </h3>
             <div className='best-members__list'>
                 {bestMembers.map((member: { id: number, userName: string }) => {

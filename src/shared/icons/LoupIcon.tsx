@@ -6,8 +6,6 @@ export const LoupIcon: FC<SVGProps<SVGElement>> = (props: SVGProps<SVGElement>):
             fill="#000000"
             height="16px"
             width="16px"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg" 
             viewBox="0 0 512.001 512.001">
             <g>
                 <g>

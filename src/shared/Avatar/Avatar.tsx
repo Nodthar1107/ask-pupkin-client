@@ -1,6 +1,6 @@
 import { clsx } from 'clsx';
 import { FC, HTMLProps, ReactElement } from 'react';
-import { localizations } from '@shared/i18n';
+import { translations } from '@shared/i18n';
 
 import '@shared/Avatar/style.scss';
 
@@ -13,7 +13,7 @@ export const Avatar: FC<HTMLProps<HTMLImageElement>> = ({...props}): ReactElemen
                 <div className='empty-avatar__line-horizontal_1' />
                 <div className='empty-avatar__line-horizontal_2' />
                 <span className='empty-avatar__title'>
-                    {alt ? alt : localizations.emptyAvatar_Placeholder}
+                    {alt ? alt : translations.emptyAvatar_Placeholder}
                 </span>
             </div>
         )

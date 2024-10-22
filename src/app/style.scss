@@ -79,18 +79,27 @@ legend {
 }
 /* Конец обнуления стилей  */
 
+body {
+	height: 100%;;
+}
+
 #root {
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
 	font-family: 'Courier New', Courier, monospace;
 }
 
 .container {
-	max-width: 980px;
+	width: 980px;
+	padding: 0 auto;
 	margin: 0px auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	padding: 10px 20px;
+	padding-left: 0px;
 	font-weight: bold;
 }
 

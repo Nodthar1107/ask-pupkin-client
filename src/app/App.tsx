@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Layout } from '@pages/Layout';
 import '@app/style.scss';
 import { QuestionsPage } from '@pages/QuestionsPage/QuestionsPage';
+import { NewQuestion } from '@pages/NewQuestion/NewQuestion';
 
 const router = createBrowserRouter([
     {
@@ -9,12 +10,16 @@ const router = createBrowserRouter([
         element: <Layout />,
         children: [
             {
-                path: '',
+                path: '/',
                 element: <QuestionsPage />
             },
             {
-                path: 'ask',
-                element: <div>ask</div>
+                path: '/new-question',
+                element: <NewQuestion />
+            },
+            {
+                path: '/questions',
+
             }
         ]
     }
