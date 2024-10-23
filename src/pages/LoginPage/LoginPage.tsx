@@ -25,14 +25,12 @@ export const LoginPage: FC = (): ReactElement => {
     const onPasswordChange = (event: ChangeEvent<HTMLInputElement>) => {
         setPassword(event.target.value);
 
-        if (event.target.value.length === 0) {
+        if (event.target.value.length < 8) {
             setErrorMessages([translations.loginPage_emptyPasswordFieldError]);
-        } else if (event.target.value.length < 8) {
-            setErrorMessages([translations.loginPage_incorrectPasswordError]);
-        } else {
-            setErrorMessages([]);
         }
     }
+
+
 
 
     return (

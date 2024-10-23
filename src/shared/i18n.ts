@@ -28,7 +28,16 @@ export const translations = new LocalizedStrings({
     loginPage_incorrectPasswordError: 'Неверный пароль',
     loginPage_emptyPasswordFieldError: 'Поле "Пароль" не может быть пустым',
     loginPage_createNewAccount: 'Создать новый аккаунт',
-    registerPage_header: 'Регистрация'
+    registerPage_header: 'Регистрация',
+    registerPage_emailFieldLabel: 'Почта',
+    registerPage_loginFieldLabel: 'Логин',
+    registerPage_nickNameFieldLabel: 'Никнейм',
+    registerPage_passwordFieldLabel: 'Пароль',
+    registerPage_repeatPasswordFieldLabel: 'Повторите пароль',
+    registerPage_registerButton: 'Зарегистрироваться!',
+    registerPage_passwordLengthError: 'Пароль недостаточно длинный',
+    registerPage_passwordUnmatched: 'Введенные пароли не совпадают'
+
   },
   en: {
     commons_askButton_text: 'Ask!',
@@ -57,6 +66,14 @@ export const translations = new LocalizedStrings({
     loginPage_incorrectPasswordError: 'Incorrect password',
     loginPage_emptyPasswordFieldError: '"Password" can\'t be empty',
     loginPage_createNewAccount: 'Create new account',
-    registerPage_header: 'Registration'
+    registerPage_header: 'Registration',
+    registerPage_emailFieldLabel: 'Email',
+    registerPage_loginFieldLabel: 'Login',
+    registerPage_nickNameFieldLabel: 'NickName',
+    registerPage_passwordFieldLabel: 'Password',
+    registerPage_repeatPasswordFieldLabel: 'Repeat password',
+    registerPage_registerButton: 'Register!',
+    registerPage_passwordLengthError: 'Incorrect password length',
+    registerPage_passwordUnmatched: 'Passwords don\'t match'
   }
 })
