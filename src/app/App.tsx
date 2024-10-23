@@ -8,6 +8,7 @@ import { QuestionPage } from '@pages/QuestionPage/QuestionPage';
 import '@app/style.scss';
 import { LoginPage } from '@pages/LoginPage/LoginPage';
 import { RegisterPage } from '@pages/RegisterPage/RegisterPage';
+import { SettingsPage } from '@pages/SettingsPage/SettingsPage';
 
 const router = createBrowserRouter([
     {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <RegisterPage />
+            },
+            {
+                path: '/settings',
+                element: <SettingsPage />
             }
         ]
     }

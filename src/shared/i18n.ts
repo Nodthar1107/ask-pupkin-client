@@ -18,6 +18,7 @@ export const translations = new LocalizedStrings({
     newQuestionPage_text: 'Текст',
     newQuestionPage_tags: 'Тэги',
     newQuestionPage_ask: 'Спросить',
+    newQuestionPage_emptyTitleError: 'Поле "Заголовок" не должно быть пустым',
     tagPage_ask: 'Тег',
     questionPage_enterYourAnswer: 'Введите Ваш ответ',
     questionPage_Answer: 'Ответить',
@@ -36,8 +37,8 @@ export const translations = new LocalizedStrings({
     registerPage_repeatPasswordFieldLabel: 'Повторите пароль',
     registerPage_registerButton: 'Зарегистрироваться!',
     registerPage_passwordLengthError: 'Пароль недостаточно длинный',
-    registerPage_passwordUnmatched: 'Введенные пароли не совпадают'
-
+    registerPage_passwordUnmatched: 'Введенные пароли не совпадают',
+    settingsPage_header: 'Настройки'
   },
   en: {
     commons_askButton_text: 'Ask!',
@@ -56,6 +57,7 @@ export const translations = new LocalizedStrings({
     newQuestionPage_text: 'Text',
     newQuestionPage_tags: 'Tags',
     newQuestionPage_ask: 'Ask',
+    newQuestionPage_emptyTitleError: 'Title must be filled',
     tagPage_ask: 'Tag',
     questionPage_enterYourAnswer: 'Enter your answer',
     questionPage_Answer: 'Answer',
@@ -74,6 +76,7 @@ export const translations = new LocalizedStrings({
     registerPage_repeatPasswordFieldLabel: 'Repeat password',
     registerPage_registerButton: 'Register!',
     registerPage_passwordLengthError: 'Incorrect password length',
-    registerPage_passwordUnmatched: 'Passwords don\'t match'
+    registerPage_passwordUnmatched: 'Passwords don\'t match',
+    settingsPage_header: 'Settings'
   }
 })

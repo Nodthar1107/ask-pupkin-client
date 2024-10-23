@@ -35,7 +35,7 @@ export const Navigator: FC<INavigatorProps> = ({
                             Mr. Pupkin
                         </div>
                         <div className='app-navigator__actions'>
-                            <Link to='#'>{translations.commons_setting}</Link>
+                            <Link to='/settings'>{translations.commons_setting}</Link>
                             <Link to='/login'>{translations.commons_logOut}</Link>
                         </div>
                     </div>
