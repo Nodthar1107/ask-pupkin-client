@@ -1,0 +1,21 @@
+.nodthar-ui-kit-number-control {
+    position: relative;
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+
+    border: 3px solid black;
+    border-radius: 2px;
+
+    &__checked-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+
+        width: 20px;
+        height: 20px;
+    }
+}

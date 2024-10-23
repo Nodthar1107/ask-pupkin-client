@@ -1,6 +1,10 @@
 .form-control {
     display: flex;
 
+    &_reverse-orer {
+        flex-direction: row-reverse;
+    }
+
     &__label {
         display: inline-block;
     }

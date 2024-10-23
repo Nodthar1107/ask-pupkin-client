@@ -8,11 +8,12 @@ interface IInputControlProps {
     mutiline?: boolean;
     rows?: number;
     cols?: number;
+    placeholder?: string;
     onChange?: (event: ChangeEvent) => void;
 }
 
 export const InputControl: FC<IInputControlProps & HTMLProps<HTMLElement>> = ({
-    value, mutiline, rows, cols, className, onChange, ...props
+    value, mutiline, rows, cols, placeholder, className, onChange, ...props
 }): ReactElement => {
     const [inputValue, setInputValue] = useState(value || '');
 
@@ -35,6 +36,7 @@ export const InputControl: FC<IInputControlProps & HTMLProps<HTMLElement>> = ({
             value={inputValue}
             rows={rows}
             cols={cols}
+            placeholder={placeholder}
             onChange={onChangeHandler}
         />
     );

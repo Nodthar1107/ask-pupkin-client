@@ -2,6 +2,19 @@
     padding: 10px 0px;
 
     &__horizontal-line {
+        margin-bottom: 20px;
         border: 1px solid black;
+    }
+
+    &__answer-control {
+        margin: 20px 0px;
+    }
+}
+
+.answers-list {
+    &__answer-wrapper {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 20px;
     }
 }

@@ -16,7 +16,9 @@ export const translations = new LocalizedStrings({
     newQuestionPage_text: 'Текст',
     newQuestionPage_tags: 'Тэги',
     newQuestionPage_ask: 'Спросить',
-    tagPage_ask: 'Тег'
+    tagPage_ask: 'Тег',
+    questionPage_enterYourAnswer: 'Введите Ваш ответ',
+    questionPage_Answer: 'Ответить'
   },
   en: {
     commons_askButton_text: 'Ask!',
@@ -33,6 +35,8 @@ export const translations = new LocalizedStrings({
     newQuestionPage_text: 'Text',
     newQuestionPage_tags: 'Tags',
     newQuestionPage_ask: 'Ask',
-    tagPage_ask: 'Tag'
+    tagPage_ask: 'Tag',
+    questionPage_enterYourAnswer: 'Enter your answer',
+    questionPage_Answer: 'Answer'
   }
 })

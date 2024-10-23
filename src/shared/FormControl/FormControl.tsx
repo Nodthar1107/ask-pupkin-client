@@ -5,21 +5,28 @@ import '@shared/FormControl/style.scss';
 
 interface IFormControlProps {
     control: ReactElement;
-    label: string;
+    label?: string;
+    labelPosition?: 'left' | 'right';
     minLabelWidth?: number;
     fullWidth?: boolean;
 }
 
 export const FormControl: FC<IFormControlProps & HTMLProps<HTMLElement>> = ({
-    label, control, minLabelWidth = 20, fullWidth = false, ...props
+    label, control, labelPosition = 'left', minLabelWidth = 20, fullWidth = false, ...props
 }): ReactElement => {
     const { className } = props;
     
     return (
-        <label className={clsx('form-control', className)}>
-            <span className='form-control__label' style={{ minWidth: `${minLabelWidth}px` }}>
-                {label}
-            </span>
+        <label className={clsx(
+                'form-control',
+                labelPosition === 'right' && 'form-control_reverese-order',
+                className
+            )}>
+            {label && (
+                <span className='form-control__label' style={{ minWidth: `${minLabelWidth}px` }}>
+                    {label}
+                </span>
+            )}
             {fullWidth &&
                 cloneElement(
                     control, {
