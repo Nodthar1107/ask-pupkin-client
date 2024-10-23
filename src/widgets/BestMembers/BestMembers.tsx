@@ -28,7 +28,7 @@ const bestMembers: { id: number, userName: string }[] = [
     },
     {
         id: 5,
-        userName: 'And my bowl!'
+        userName: 'And my bow!'
     },
     {
         id: 6,
@@ -47,7 +47,7 @@ export const BestMembers: FC<HTMLProps<HTMLElement>> = ({
             <div className='best-members__list'>
                 {bestMembers.map((member: { id: number, userName: string }) => {
                     return (
-                        <Link className='best-members__member-link' to='#'>
+                        <Link className='best-members__member-link' to='#' key={member.id}>
                             {member.userName}
                         </Link>
                     );

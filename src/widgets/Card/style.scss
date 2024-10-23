@@ -1,0 +1,32 @@
+.card {
+    display: flex;
+    gap: 20px;
+    padding: 10px 10px 20px 10px;
+    border: 5px solid black;
+
+    &_no-borders {
+        outline: 5px;
+        border: 0px;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        width: 100px;
+        padding: 0px 10px;
+        box-sizing: border-box;
+    }
+
+    &__right {
+        padding-right: 40px;
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    &__user-avatar {
+        width: 80px;
+        height: 80px;
+    }
+}

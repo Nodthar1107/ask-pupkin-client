@@ -1,0 +1,43 @@
+.question-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__question {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+    }
+
+    &__question-title {
+        font-size: 28px;
+        word-break: break-all;
+
+        &_shorten {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+
+    &__description_limited {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+
+    &__additional-info {
+        margin-top: 30px;
+    }
+
+    &__answers {
+        margin-right: 20px;
+    }
+
+    &__tags-list {
+        display: inline-flex;
+        gap: 10px;
+    }
+}

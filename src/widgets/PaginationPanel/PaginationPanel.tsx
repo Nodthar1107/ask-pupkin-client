@@ -22,7 +22,8 @@ export const PaginationPanel: FC<IPaginationPanelProps & HTMLProps<HTMLElement>>
                             'pagination-panel__page-button',
                             index === 0 && 'pagination-panel__page-button_active'
                         )}
-                        color='secondary'>
+                        color='secondary'
+                        key={index}>
                         {index + 1}
                     </Button>
                 );

@@ -49,13 +49,12 @@ export const PopularTags: FC<HTMLProps<HTMLElement>> = ({ ...props }): ReactElem
             <div className='popular-tags__tags-list'>
                 {tags.map((tag) => {
                     return (
-                        <Link className='popular-tags__link' to='#'>
-                            <Tag
-                                className='popular-tags__tag'
-                                rate={tag.popularityRate}
-                                label={tag.tagName}
-                            />
-                        </Link>
+                        <Tag
+                            className='popular-tags__tag'
+                            rate={tag.popularityRate}
+                            label={tag.tagName}
+                            key={tag.tagName}
+                        />
                     );
                 })}
             </div>

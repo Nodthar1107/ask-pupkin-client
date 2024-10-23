@@ -1,14 +1,61 @@
 import { translations } from '@shared/i18n';
-import { FC } from 'react';
+import { FC, ReactElement } from 'react';
 import { Link } from 'react-router-dom';
 
 import '@pages/QuestionsPage/style.scss';
-import { QuestionCardList } from '@widgets/QuestionList/QuestionCardList';
-import { PopularTags } from '@widgets/PopularTags/PopularTags';
-import { BestMembers } from '@widgets/BestMembers/BestMembers';
+import { CardList } from '@widgets/CardList/CardList';
 import { withPagination } from '@shared/hocs/withPagination/withPagination';
+import { Card } from '@widgets/Card/Card';
+import { QuestionBody } from '@widgets/QuestionBody/QuestionBody';
 
-const Questions = withPagination(QuestionCardList);
+const Questions = withPagination(CardList);
+
+const questions = [
+    {
+        id: 0,
+        title: 'Очень длинный вопроооооооооооооооооооооооооооооооооооос',
+        description:
+            'Lorem ipsum dolor sit amet consectetur adipisicing' +
+            'elit. Eligendi, laudantium delectus? Animi cum, voluptates ' +
+            'ipsam accusantium nemo id modi et reiciendis perferendis ' +
+            'dolore alias beatae distinctio vero aut molestiae enim!',
+        answersCount: 3,
+        tags: ['Тег1', 'Тег2']
+    },
+    {
+        id: 1,
+        title: 'Очень длинный вопроооооооооооооооооооооооооооооооооооос',
+        description:
+            'Lorem ipsum dolor sit amet consectetur adipisicing' +
+            'elit. Eligendi, laudantium delectus? Animi cum, voluptates ' +
+            'ipsam accusantium nemo id modi et reiciendis perferendis ' +
+            'dolore alias beatae distinctio vero aut molestiae enim!',
+        answersCount: 3,
+        tags: ['Тег1', 'Тег2']
+    },
+    {
+        id: 2,
+        title: 'Очень длинный вопроооооооооооооооооооооооооооооооооооос',
+        description:
+            'Lorem ipsum dolor sit amet consectetur adipisicing' +
+            'elit. Eligendi, laudantium delectus? Animi cum, voluptates ' +
+            'ipsam accusantium nemo id modi et reiciendis perferendis ' +
+            'dolore alias beatae distinctio vero aut molestiae enim!',
+        answersCount: 3,
+        tags: ['Тег1', 'Тег2']
+    },
+    {
+        id: 3,
+        title: 'Очень длинный вопроооооооооооооооооооооооооооооооооооос',
+        description:
+            'Lorem ipsum dolor sit amet consectetur adipisicing' +
+            'elit. Eligendi, laudantium delectus? Animi cum, voluptates ' +
+            'ipsam accusantium nemo id modi et reiciendis perferendis ' +
+            'dolore alias beatae distinctio vero aut molestiae enim!',
+        answersCount: 3,
+        tags: ['Тег1', 'Тег2']
+    }
+];
 
 export const QuestionsPage: FC = () => {
     return (
@@ -22,8 +69,27 @@ export const QuestionsPage: FC = () => {
                 </Link>
             </div>
             <div className='question-page__content'>
-                <Questions pagesCount={5} />
+                <Questions pagesCount={5}>
+                        {questions.map((question) => {
+                            return (
+                                <Card className='question-card'>
+                                    <QuestionBody
+                                        headerElement={(
+                                            <Link to={`/questions/${question.id}`}>
+                                                {question.title}
+                                            </Link>
+                                        )}
+                                        description={question.description}
+                                        limitMaxDescriptionLines
+                                        answersCount={question.answersCount}
+                                        shortenTitle
+                                        tags={question.tags}
+                                    />
+                                </Card>
+                            );
+                        })}
+                </Questions>
             </div>
         </div>
-    )
+    );
 }

@@ -13,11 +13,7 @@
     }
 
     &:focus-within {
-        border-color: 2px solid blue;
-    }
-
-    &:focus {
-        border-color: blue;
+        border-color: blue
     }
 
     &__input {
