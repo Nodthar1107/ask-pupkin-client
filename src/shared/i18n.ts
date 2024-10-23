@@ -22,6 +22,12 @@ export const translations = new LocalizedStrings({
     questionPage_enterYourAnswer: 'Введите Ваш ответ',
     questionPage_Answer: 'Ответить',
     loginPage_header: 'Войти',
+    loginPage_loginFieldLabel: 'Логин',
+    loginPage_passwordFieldLabel: 'Пароль',
+    loginPage_logInButton: 'Войти',
+    loginPage_incorrectPasswordError: 'Неверный пароль',
+    loginPage_emptyPasswordFieldError: 'Поле "Пароль" не может быть пустым',
+    loginPage_createNewAccount: 'Создать новый аккаунт',
     registerPage_header: 'Регистрация'
   },
   en: {
@@ -45,6 +51,12 @@ export const translations = new LocalizedStrings({
     questionPage_enterYourAnswer: 'Enter your answer',
     questionPage_Answer: 'Answer',
     loginPage_header: 'Log in',
+    loginPage_loginFieldLabel: 'Login',
+    loginPage_passwordFieldLabel: 'Password',
+    loginPage_logInButton: 'Log in',
+    loginPage_incorrectPasswordError: 'Incorrect password',
+    loginPage_emptyPasswordFieldError: '"Password" can\'t be empty',
+    loginPage_createNewAccount: 'Create new account',
     registerPage_header: 'Registration'
   }
 })

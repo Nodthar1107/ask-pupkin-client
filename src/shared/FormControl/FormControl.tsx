@@ -22,11 +22,10 @@ export const FormControl: FC<IFormControlProps & HTMLProps<HTMLElement>> = ({
                 labelPosition === 'right' && 'form-control_reverese-order',
                 className
             )}>
-            {label && (
-                <span className='form-control__label' style={{ minWidth: `${minLabelWidth}px` }}>
-                    {label}
-                </span>
-            )}
+            
+            <span className='form-control__label' style={{ minWidth: `${minLabelWidth}px` }}>
+                {label}
+            </span>
             {fullWidth &&
                 cloneElement(
                     control, {

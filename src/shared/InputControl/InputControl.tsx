@@ -1,5 +1,5 @@
 import { clsx } from "clsx";
-import { ChangeEvent, FC, HTMLProps, ReactElement, useCallback, useState } from "react";
+import { ChangeEvent, FC, HTMLProps, ReactElement, useCallback, useEffect, useState } from "react";
 
 import '@shared/InputControl/style.scss';
 
@@ -15,6 +15,8 @@ interface IInputControlProps {
 export const InputControl: FC<IInputControlProps & HTMLProps<HTMLElement>> = ({
     value, mutiline, rows, cols, placeholder, className, onChange, ...props
 }): ReactElement => {
+    const { type } = props;
+    
     const [inputValue, setInputValue] = useState(value || '');
 
     const TagName = mutiline ? 'textarea' : 'input';
@@ -25,6 +27,10 @@ export const InputControl: FC<IInputControlProps & HTMLProps<HTMLElement>> = ({
 
         setInputValue(target.value);
     }, [onChange, mutiline]);
+
+    useEffect(() => {
+        setInputValue(value);
+    }, [value])
 
     return (
         <TagName
@@ -38,6 +44,7 @@ export const InputControl: FC<IInputControlProps & HTMLProps<HTMLElement>> = ({
             cols={cols}
             placeholder={placeholder}
             onChange={onChangeHandler}
+            type={type}
         />
     );
 }

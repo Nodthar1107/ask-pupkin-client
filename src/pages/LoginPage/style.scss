@@ -1,0 +1,11 @@
+.login-page {
+    &__login-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__log-in-button {
+        width: fit-content;
+    }
+}

@@ -1,0 +1,11 @@
+.error-panel {
+    min-height: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &__message {
+        color: red;
+    }
+}
