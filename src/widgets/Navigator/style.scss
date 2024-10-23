@@ -41,4 +41,10 @@
         display: flex;
         gap: 10px;
     }
+
+    &__unauthorized-actions-panel {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
 }

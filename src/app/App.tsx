@@ -6,6 +6,8 @@ import { TagPage } from '@pages/TagPage/TagPage';
 import { QuestionPage } from '@pages/QuestionPage/QuestionPage';
 
 import '@app/style.scss';
+import { LoginPage } from '@pages/LoginPage/LoginPage';
+import { RegisterPage } from '@pages/RegisterPage/RegisterPage';
 
 const router = createBrowserRouter([
     {
@@ -27,6 +29,14 @@ const router = createBrowserRouter([
             {
                 path: '/questions/:id',
                 element: <QuestionPage />
+            },
+            {
+                path: '/login',
+                element: <LoginPage />
+            },
+            {
+                path: '/register',
+                element: <RegisterPage />
             }
         ]
     }

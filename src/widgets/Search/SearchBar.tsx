@@ -9,10 +9,12 @@ import { Button } from '@shared/Button/Button';
 
 interface ISearchBarProps {
     onSearchSubmit: VoidFunction;
+    placeholder?: string;
+    useAskButton?: boolean
 }
 
 export const SearchBar: FC<ISearchBarProps & HTMLProps<HTMLDivElement>> = ({
-    onSearchSubmit, ...props
+    onSearchSubmit, placeholder, useAskButton = true, ...props
 }): ReactElement => {
     const { className, ...others } = props;
     const [searchText, setSearchText] = useState<string>('');
@@ -24,17 +26,20 @@ export const SearchBar: FC<ISearchBarProps & HTMLProps<HTMLDivElement>> = ({
     return (
         <div className={clsx('search-bar', className)} {...others}>
             <DecoratedInputControl
+                placeholder={placeholder}
                 className='search-bar__input'
                 beforeIcon={<LoupIcon />}
                 value={searchText}
                 onChange={changeEventHandler}
             />
-            <Button
-                className='search-bar__submit-button'
-                color='primary'
-                onClick={onSearchSubmit}>
-                {translations.commons_askButton_text}
-            </Button>
+            {useAskButton && (
+                <Button
+                    className='search-bar__submit-button'
+                    color='primary'
+                    onClick={onSearchSubmit}>
+                    {translations.commons_askButton_text}
+                </Button>
+            )}
         </div>
     );
 }

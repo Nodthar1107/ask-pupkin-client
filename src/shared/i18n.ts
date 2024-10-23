@@ -5,6 +5,8 @@ export const translations = new LocalizedStrings({
     commons_askButton_text: 'Спросить!',
     commons_setting: 'Настройки',
     commons_logOut: 'Выйти',
+    commons_logIn: 'Войти',
+    commons_register: 'Зарегистрироваться',
     emptyAvatar_Placeholder: 'Аватар',
     questionsPage_header: 'Новые вопросы',
     questionsPage_hotQuestionsLink: 'Горячие вопросы',
@@ -18,12 +20,16 @@ export const translations = new LocalizedStrings({
     newQuestionPage_ask: 'Спросить',
     tagPage_ask: 'Тег',
     questionPage_enterYourAnswer: 'Введите Ваш ответ',
-    questionPage_Answer: 'Ответить'
+    questionPage_Answer: 'Ответить',
+    loginPage_header: 'Войти',
+    registerPage_header: 'Регистрация'
   },
   en: {
     commons_askButton_text: 'Ask!',
     commons_setting: 'settings',
     commons_logOut: 'log out',
+    commons_logIn: 'log in',
+    commons_register: 'register',
     emptyAvatar_Placeholder: 'Avatar',
     questionsPage_header: 'New Questions',
     questionsPage_hotQuestionsLink: 'Hot Questions',
@@ -37,6 +43,8 @@ export const translations = new LocalizedStrings({
     newQuestionPage_ask: 'Ask',
     tagPage_ask: 'Tag',
     questionPage_enterYourAnswer: 'Enter your answer',
-    questionPage_Answer: 'Answer'
+    questionPage_Answer: 'Answer',
+    loginPage_header: 'Log in',
+    registerPage_header: 'Registration'
   }
 })

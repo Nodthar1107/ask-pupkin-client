@@ -1,15 +1,17 @@
 import { Navigator } from "@widgets/Navigator/Navigator";
 import * as React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
 import '@pages/style.scss';
 import { PopularTags } from "@widgets/PopularTags/PopularTags";
 import { BestMembers } from "@widgets/BestMembers/BestMembers";
 
 export const Layout: React.FC = (): React.ReactElement => {
+    const location = useLocation();
+    
     return (
         <>
-            <Navigator />
+            <Navigator isAuthorised={!location.pathname.includes('login') && !location.pathname.includes('register')} />
             
             <main className='app-main container'>
                 <hr className='hr-line' />
